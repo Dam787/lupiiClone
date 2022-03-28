@@ -157,20 +157,257 @@
 
             
             <script></script>
-            <nav id="nav" class="navMain flex p2 p3--md navMain--overlay"></nav>
-            <nav id="menu" class="pr flex flex--column navMenu navMenu--hidden min100vh max100vh bg-peach color--dkgreen"></nav>
-            <div id="cart" class="navCart navCart--hidden min100vh max100vh bg--white color--dkgreen" style="overflow-y:auto;" data-cart-view></div>
+            <nav id="nav" class="navMain flex p2 p3--md navMain--overlay">
+                ::before
+                <div class="flex flex--alignc">
+                    <a href="/" class="pointer"><img src="" alt="Lupii" class="navMain__logo"></a>
+                </div>
+                <div class="flex__grow"></div>
+                <a href="" class="naavMain__account pr pointer pl2 pl3--md">
+                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/icon_account@2x.png?v=3264371371993197792" alt="Account" class="navMain__icon">
+                    <div class="color-dkgreen uppercase">Account</div>
+                </a>
+                <button class="pointer pl2 pl3--md" id="nav_open_cart" data-cart-view="data-cart-view">
+                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/icon_cart@2x.png?v=18396662666706488310" alt="Cart" class="navMain__icon" rv-class-dn="cart.item_count | gt 0">
+                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/icon_cartFull@2x.png?v=5522778885520340325" alt="Cart (full)" class="navMain__icon dn" rv-class-dn="cart.item_count | lt 1">
+                </button>
+                <button class="pointer pl2 pl3--md" id="nav_open_menu">
+                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/icon_menu_white.svg?v=16167505129025667283" alt="Menu" class="navMain__icon">
+                </button>
+            </nav>
+            <nav id="menu" class="pr flex flex--column navMenu navMenu--hidden min100vh max100vh bg-peach color--dkgreen">
+                <img src="" alt="x" class="pointer p2 p3--md" id="menu_close_button" style="position: fixed; top: 0; right: 0;">
+                <div class="p2 p3--md flex__grow" style="overflow-y: auto;" id="menu_content">
+                <div></div>
+                <div class="mt2 mt3--md mb2 mb4--md">
+                    <div class="mb2">
+                        <h4 class="h4 mb1">
+                         <span class="hoverLink">
+                            <a href="https://getlupii.com/products/peanut-butter-cacao-nib" title>Peanut Butter Cacao Nib</a>
+                         </span>
+                    </h4>
+                    </div>
+                    <div class="mb2">
+                        <h4 class="h4 mb1">
+                            <span class="hoverLink">
+                               <a href="https://getlupii.com/products/almond-butter-cinnamon-raisin" title>Almond Butter Cinnamon Raisin</a>
+                            </span>
+                       </h4>
+                    </div>
+                    <div class="mb2">
+                        <h4 class="h4 mb1">
+                            <span class="hoverLink">
+                               <a href="https://getlupii.com/products/peanut-butter-cacao-nib" title>Taihini Lemon Cranberry</a>
+                            </span>
+                       </h4>
+                    </div>
+                    <div class="mb2">
+                        <h4 class="h4 mb1">
+                            <span class="hoverLink">
+                               <a href="https://getlupii.com/collections/all" title>View All Bars</a>
+                            </span>
+                       </h4>
+                    </div>
+                </div>
+                <div></div>
+                <div class="mt2 mt4--md mb2 mb4--md">
+                    <a href="https://getlupii.com/apps/store-locator">
+                        <svg class="menu__mainHover" width="290.15" height="84.68" viewBox="0 0 290.15 84.68"></svg>
+                    </a>
+                </div>
+                <div class="mt2 mt3--md mb2 mb4--md">
+                    <a href="https://getlupii.com/pages/contact">
+                        <svg class="menu__mainHover" width="239.1" height="52.14" viewBox="0 0 239.1 52.14"></svg>
+                    </a>
+                </div>
+            </div>
+                <script></script>
+                <div class="flex__grow"></div>
+                <div class="bh--white color--dkgreen full-width overflow--hidden contained-width pt1 pt2--md pb1 pb2--md"> 
+                    <div class="product__marquee dib ws--nowrap" style="animation-duration: 10s;">
+                        <div class="dib product__marquee__item ws--nowrap text-smallcaps">
+                            "Powered by lupini beans, made with you and the planet in mind."
+                            ::after
+                        </div>
+                        <div class="dib product__marquee__item ws--nowrap text-smallcaps">
+                            "Powered by lupini beans, made with you and the planet in mind."
+                            ::after
+                        </div>
+                        <div class="dib product__marquee__item ws--nowrap text-smallcaps">
+                            "Powered by lupini beans, made with you and the planet in mind."
+                            ::after
+                        </div>
+                        
+                    </div>
+                 </div>
+            </nav>
+            <div id="cart" class="navCart navCart--hidden min100vh max100vh bg--white color--dkgreen" style="overflow-y:auto;" data-cart-view>
             <script></script>
-            <main role="main" class="flex__grow"></main>
+            <div class="p2 p3--md tr">
+                <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/x_dkgreen.svg?v=9309537346004271895" alt="x" class="pointer" id="cart_close_button">  </div>
+            <h2 class="h2 mb3 mb4--md pr2 pr4--md pl2 pl4--md"> your Cart</h2>
+            <div class="mt3 mb3 text-smallcaps tc" rv-hide="true" style="display: none;"> Loading ...</div>
+            <ul class="mb2 pr2 pr4--md pl2 pl4--md contained-width" style ud="cartList" rv-show="true"></ul>
+            <div class="pr2 pr4-md pl2 pl4-md mb2 mb3-md" rv-show="true" style></div>
+            <div class="be pr2 pr4--md pl2 pl4--md contained-width">
+                <p style="margin-bottom:10px;"> Products Recommended for you </p>
+                <hr>
+            </div>
+            <ul class="b2 pr2 pr4--md pl2 pl4--md contained-width" id="relatedProducts">
+                <li class="flex mb2 contained-width" style="display:flex;">
+                <div class="db flex__shrink">
+                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/products/pdp-abcr-header_2x_ea98dc2b-5cba-4ee0-a459-e8a094130d9f_large.jpg?v=1578000432" class="contained-width contained-height fit-cover cat__item__image" style="object-position:0 center;"  alt="">
+                </div>
+                <div class="ml2">
+                    <div class="mb2">
+                        <span>Almond Butter Cinnamon Raisin</span>
+                        "- 1 Box ' 12 Bars"
+                    </div>
+                    <p class="dn db--md mb2"> $ 34.95</p>
+                    <div class="dib border--dkgreen p1">
+                        <div class="flex flex--alignc">
+                            <form action="/cart/add" method="post" enctype="multipart/form-data" id="product_recommended_addToCart" class="recommendedProductForm">
+                                <div class="dib">
+                                    <div class="flex flex--alignc product__hero__addToCart contained-wdith">
+                                        <div class="flex ml2 mr2 ml2--md mr1--md" style="display:none;">
+                                        <button type="button" id="qty_dec">
+                                            <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/short_arrow_right_green.svg?v=12783080094519828053" alt="less" height="15" class="vam hflip" style="display:none;">
+                                        </button>
+                                        <input type="hidden" id="qty" name="quantity" class="tc text-smallcaps" value="1" min="1" disabled>
+                                        <button type="button" id="qty_inc">
+                                            <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/short_arrow_right_green.svg?v=12783080094519828053" alt="more" height="15" class="vam" style="display:none;">
+                                        </button>
+                                        </div>
+                                        <input type="hidden" name="id" value="31391463080002">
+                                        <button type="submit" class="button bg--gold button--hoverDkGreen m0 p0 btn-recommended" id="31391463080002" onclick="recommendedProductAddToCartButton(event)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </li>
+                <li class="flex mb2 contained-width" style="display:flex;">
+                <div class="db flex__shrink">
+                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/products/lupiipdp-pbcn-header_2x_9d7770d0-c104-43fe-9524-40e52229c190_large.jpg?v=1576801355" class="contained-width contained-height fit-cover cart__item__image" style="object-position: 0 center;">
+                    <div class="ml2">
+                        <div class="mb2">
+                            <span>Peanut Butter Cacao nib</span>
+                            "- 1 Box ' 12 Bars"
+                        </div>
+                        <p class="dn db--md mb2"> $ 34</p>
+                        <div class="dib border--dkgreen p1">
+                            <div class="flex flex--alignc">
+                                <form action="/cart/add" method="post" enctype="multiprt/form-data" id="product_recommended_addToCart" class="recommendedProductForm">
+                                    <div class="dib">
+                                        <div class="flex flex--alignc product__hero__adToCart contained-width">
+                                            <div class=" flex ml2 mr2 ml2--md mr1--mddn" style="display:none;">
+                                            <button type="button" id="qty_dec" disabled>
+                                                <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/short_arrow_right_green.svg?v=12783080094519828053" alt="less" height="15" class="vam hflip" style="display:none;">
+                                            </button>
+                                            <input type="hidden" id="qty" name="quantity" class="tc text-smallcaps" value="1" min="1" disabled>
+                                            <button type="button" id="qty_inc" disabled>
+                                                <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/short_arrow_right_green.svg?v=12783080094519828053" alt="more" height="15" class="vam" style="display:none;">
+                                            </button>
+                                        
+                                        </div>
+                                            <input type="hidden" name="id" value="31391461834818">
+                                            <button class="button bg--gole button--hoverDkGreen m0 p0 btn-recommended" id="31391461834818" disabled onclick="recommendedProductAddToCartButton(event)">Currently sold out</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+                <li class="flex mb2 contained-width" style="display:flex;">
+                    <div class="db flex__shrink">
+                        <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/products/lupiipdp-pbcn-header_2x_9d7770d0-c104-43fe-9524-40e52229c190_large.jpg?v=1576801355" class="contained-width contained-height fit-cover cart__item__image" style="object-position: 0 center;">
+                        <div class="ml2">
+                            <div class="mb2">
+                                <span>Tahini Lemon Cranberry</span>
+                                "- 1 Box ' 12 Bars"
+                                "- 1 Box ' 12 Bars"
+                            </div>
+                            <p class="dn db--md mb2"> $ 34</p>
+                            <div class="dib border--dkgreen p1">
+                                <div class="flex flex--alignc">
+                                    <form action="/cart/add" method="post" enctype="multiprt/form-data" id="product_recommended_addToCart" class="recommendedProductForm">
+                                        <div class="dib">
+                                            <div class="flex flex--alignc product__hero__adToCart contained-width">
+                                                <div class=" flex ml2 mr2 ml2--md mr1--mddn" style="display:none;">
+                                                <button type="button" id="qty_dec" disabled>
+                                                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/short_arrow_right_green.svg?v=12783080094519828053" alt="less" height="15" class="vam hflip" style="display:none;">
+                                                </button>
+                                                <input type="hidden" id="qty" name="quantity" class="tc text-smallcaps" value="1" min="1" disabled>
+                                                <button type="button" id="qty_inc" disabled>
+                                                    <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/short_arrow_right_green.svg?v=12783080094519828053" alt="more" height="15" class="vam" style="display:none;">
+                                                </button>
+                                            
+                                            </div>
+                                                <input type="hidden" name="id" value="31391461834818">
+                                                <button class="button bg--gole button--hoverDkGreen m0 p0 btn-recommended" id="31391461834818" disabled onclick="recommendedProductAddToCartButton(event)">Currently sold out</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div></li>
+            </ul>
+            <script></script>
+            </div>
+            <script></script>
+            <main role="main" class="flex__grow">
+                <section id="shopify-section-home__hero"  class="shopify-section">
+                    <div class="bg--green grid grid-c1 grid-c2--md alignc">
+                        <div class="p3 dn--md"></div>
+                        <div class="pr2 pl2 pr5--md pt3 pt4--md pb4 grid__alignc home__hero__copy">
+                            <h1 class="h1 color--gold mb2 mb3--md fadeInUp">Plant-based prltein for planet based people.</h1>
+                            <h4 class="h4 color--gikd mb2 mb3--md fadeInUp delay3">
+                                "Lup is unleashing the power of the small-but-mighty lupini bean with their new vegan protein bars."
+                            </h4>
+                            <div class="fadeInUp delay6">
+                                <a href="https://getlupii.com/collections/all">
+                                    <span class="bg--gold button">Shop All Bars</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="full-width h-80 pr" id="home_hero">
+                            <img src="https://cdn.shopify.com/s/files/1/0254/7603/8722/t/14/assets/home_hero_back.jpg?v=14586239368205834020" sizes="(max-width: 600px) 600px, 1200px" loading="lazy" alt="woman enjoying Lupii" class="full-width">
+                            <canvas class="full-width full-height pa" id="home_hero_lower" width="300" height="370" style="top: 0; left: 0;"></canvas>
+                        </div>
+                    </div>
+                    <script src="" defer></script>
+                    <script></script>
+                </section>
+                <section id="shopify-section-home__press" class="shopify-section">
+
+                    <!-- 요기부터 시작 3월 28일 -->
+                    
+                </section>
+                <section id="shopify-section-home__ourbites" class="shopify-section"></section>
+                <section id="shopify-section-home++intro" class="shopify-section"></section>
+                <section id="shopify-section-home__products_slider" class="shopify-section"></section>
+                <section id="shopify-section-home__groupies" class="shopify-section"></section>
+                <section id="shopify-section-home__founders" class="shopify-section"></section>
+                <section id="shopify-section-location" class="shopify-section"></section>
+                <section id="shopify-section-home__illustration" class="shopify-section"></section>
+                <div class="grid grid-c1 grid-c2--md grid--alignc p3 pt5--md pb5--md pr0--md bg--gold color--dkgreen"></div>
+            </main>
             <footer class="bg--dkgreen color--white"></footer>
         </div>
         <script></script>
         <script></script>
         <script type="text/javascript"></script>
         <div class="smile-shopify-init" data-channel-key="channel_6YapsIkP9cldgMtzMJe72vAG"></div>
-        <style type="text/css"></style>
-        <style type="text/css"></style>
-        <style type="text/css"></style>
+        <style type="text/css">
+        </style>
+        <style type="text/css">
+        </style>
+        <style type="text/css">
+        </style>
         <div>
             <div id="smile-ui-container" style="position: fixed; width: 0px; height: 0px; bottom: 0px; right: 0px; z-index: 33423444 !important;">
             <div class="smile-launcher-frame-container smile-launcher-border-radius-circular smile-launcher-closed" style="bottom: 40px; width: 246px; left: 40px;">
